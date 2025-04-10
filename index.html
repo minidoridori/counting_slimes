@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>슬라임은 몇 마리?</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>[DoriDori] 슬라임은 몇 마리?</h1>
+  <div id="container">
+    <canvas id="gameCanvas" width="1000" height="600"></canvas>
+    <div id="overlay"></div>
+  </div>
+  <div id="controls">
+    <label for="difficulty">난이도: </label>
+    <select id="difficulty">
+      <option value="easy" selected>하</option>
+      <option value="medium">중</option>
+      <option value="hard">상</option>
+      <option value="veryhard">최상</option>
+    </select>
+    <label for="duration">진행 시간: </label>
+    <select id="duration">
+      <option value="5000" selected>5초</option>
+      <option value="10000">10초</option>
+      <option value="15000">15초</option>
+    </select>
+    <button onclick="startGame()">게임 시작</button>
+    <button onclick="showAnswer()">정답 보기</button>
+    <p id="timer">남은 시간: 5초</p>
+    <p id="answer"></p>
+  </div>
+
+  <!-- 배경음 -->
+  <audio id="bgm" src="resource/background.mp3" loop></audio>
+
+  <!-- 로그 박스 -->
+  <div id="logBox">
+    <h3 onclick="toggleLogBox()" id="logHeader">동작 로그  ▼</h3>
+    <div id="logContent"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

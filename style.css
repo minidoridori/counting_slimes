@@ -1,0 +1,144 @@
+body {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #1e1e2f, #3b3b5b);
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 3em;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+}
+
+canvas {
+  border: 2px solid #ffffff20;
+  background: #ffffff10;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+#container {
+  position: relative;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+#overlay {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 3px dashed #00d4ff;
+  top: 200px;
+  left: 400px;
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+
+#controls {
+  margin-top: 20px;
+}
+
+#controls label {
+  font-size: 1.2em;
+  margin-right: 10px;
+}
+
+#controls select {
+  padding: 10px 20px;
+  font-size: 1.1em;
+  color: #fff;
+  background: linear-gradient(45deg, #007bff, #00d4ff);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-right: 15px;
+  background-color: #262941cc;
+}
+
+#controls button {
+  padding: 14px 30px;
+  margin: 0 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(45deg, #00d4ff, #007bff);
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 212, 255, 0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#controls button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 212, 255, 0.6);
+}
+
+#controls button:active {
+  transform: translateY(1px);
+  box-shadow: 0 3px 10px rgba(0, 212, 255, 0.3);
+}
+
+#timer {
+  font-size: 1.4em;
+  margin-top: 15px;
+  color: #ffcc00;
+  text-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
+}
+
+#answer {
+  font-size: 1.4em;
+  margin-top: 15px;
+  color: #00ffcc;
+  text-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+}
+
+/* 로그 박스 */
+#logBox {
+  position: absolute;
+  top: 100px;
+  right: 20px;
+  width: 320px;
+  max-height: 500px;
+  background: #ffffff10;
+  border: 2px solid #00d4ff50;
+  border-radius: 10px;
+  padding: 15px;
+  color: #fff;
+  font-size: 0.95em;
+  box-shadow: 0 4px 15px rgba(0, 212, 255, 0.2);
+  cursor: move; /* 드래그 가능한 커서 표시 */
+  text-align: left;
+}
+
+#logBox h3 {
+  margin-top: 0;
+  font-size: 1.1em;
+  border-bottom: 1px solid #00d4ff30;
+  padding-bottom: 5px;
+  cursor: pointer;
+  user-select: none;
+}
+
+#logContent {
+  max-height: 420px;
+  overflow-y: auto;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  text-align: left;
+}
+
+.log-in {
+  color: #00d4ff;
+}
+
+.log-out {
+  color: #ff7070;
+}
